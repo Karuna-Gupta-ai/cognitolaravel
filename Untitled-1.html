@@ -1,0 +1,11 @@
+<VirtualHost *:80>
+    ServerName cognito.fsdevtutor.shop
+    DocumentRoot /var/www/html/cognitolaravel/public
+    <Directory "/var/www/html/cognitolaravel/public">
+        Options FollowSymLinks MultiViews
+        Order Allow,Deny
+        Allow from all
+    </Directory>
+    ErrorLog /var/www/html/cognitolaravel/storage/logs/error.log
+    CustomLog /var/www/html/cognitolaravel/storage/logs/access.log combined
+</VirtualHost>
